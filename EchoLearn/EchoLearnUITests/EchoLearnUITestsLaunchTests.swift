@@ -1,10 +1,3 @@
-//
-//  EchoLearnUITestsLaunchTests.swift
-//  EchoLearnUITests
-//
-//  Created by Kirsten Morgan Parikh on 5/3/25.
-//
-
 import XCTest
 
 final class EchoLearnUITestsLaunchTests: XCTestCase {

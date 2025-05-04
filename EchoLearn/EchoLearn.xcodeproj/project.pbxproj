@@ -34,30 +34,9 @@
 		3C8590D72DC6C52000E493E5 /* EchoLearnUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EchoLearnUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3C07D1E32DC7AC2E00E754F2 /* Exceptions for "EchoLearn" folder in "EchoLearnTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"GoogleService-Info.plist",
-			);
-			target = 3C8590CC2DC6C52000E493E5 /* EchoLearnTests */;
-		};
-		3C07D1E42DC7AC2E00E754F2 /* Exceptions for "EchoLearn" folder in "EchoLearnUITests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"GoogleService-Info.plist",
-			);
-			target = 3C8590D62DC6C52000E493E5 /* EchoLearnUITests */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3C8590C22DC6C51E00E493E5 /* EchoLearn */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				3C07D1E32DC7AC2E00E754F2 /* Exceptions for "EchoLearn" folder in "EchoLearnTests" target */,
-				3C07D1E42DC7AC2E00E754F2 /* Exceptions for "EchoLearn" folder in "EchoLearnUITests" target */,
-			);
 			path = EchoLearn;
 			sourceTree = "<group>";
 		};

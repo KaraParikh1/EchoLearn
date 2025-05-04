@@ -11,7 +11,7 @@ struct EchoLearnApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

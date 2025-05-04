@@ -1,10 +1,3 @@
-//
-//  EchoLearnTests.swift
-//  EchoLearnTests
-//
-//  Created by Kirsten Morgan Parikh on 5/3/25.
-//
-
 import Testing
 @testable import EchoLearn
 
