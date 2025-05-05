@@ -1,18 +1,23 @@
-//
-//  ELButton.swift
-//  EchoLearn
-//
-//  Created by Kirsten Morgan Parikh on 5/4/25.
-//
-
 import SwiftUI
 
 struct ELButton: View {
+    let title: String
+    let backgroundColor: Color
+    let action: () ->  Void
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button{
+            print("button pressed")
+            //Attempt Login
+        }label:{
+            ZStack{
+                RoundedRectangle(cornerRadius: 10).foregroundColor(backgroundColor)
+                Text(title).foregroundColor(Color.white).bold()
+            }}
     }
 }
 
 #Preview {
-    ELButton()
+    ELButton(title: "value",backgroundColor: Color.red){
+        
+    }
 }
