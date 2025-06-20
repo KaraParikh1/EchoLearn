@@ -3,18 +3,18 @@ import FirebaseFirestore
 
 struct SetsView: View {
     @StateObject var viewModel = SetsViewViewModel()
-    
-    
-    private let userId: String
+    @FirestoreQuery var sets: [FlashCardItem]
     
     init(userId: String){
-        self.userId = userId
+        self._sets = FirestoreQuery(collectionPath: "users/\(userId)/sets")
     }
     
     var body: some View {
         NavigationView {
             VStack{
-                
+                List(sets) { set in
+                    Text(set.title)
+                }.listStyle(PlainListStyle())
             }
             .navigationTitle(Text("Sets"))
             .toolbar {
