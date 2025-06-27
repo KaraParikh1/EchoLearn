@@ -14,7 +14,7 @@ class RegisterViewViewModel: ObservableObject {
             return }
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
             guard let userId = result?.user.uid else {
-                print("stoppedatvalidate")
+                print("stoppedatvalidate",error)
                 return
             }
             print("gottoend")

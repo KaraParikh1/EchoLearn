@@ -5,6 +5,8 @@ import FirebaseFirestore
 class UploadSetViewViewModel: ObservableObject {
     @Published var title = ""
     @Published var showAlert = false
+    @Published var terms : [CardItem] = [CardItem(term: "" , definition: ""),CardItem(term: "" , definition: ""),CardItem(term: "" , definition: "")]
+    @Published var i: Int = 5
     init(){}
     
     func save(){
@@ -17,14 +19,20 @@ class UploadSetViewViewModel: ObservableObject {
         }
         //Create model
         let newId = UUID().uuidString
-        let newItem = FlashCardItem(id: newId, title: title)
-        //Save model
         let db = Firestore.firestore()
-        db.collection("users")
-            .document(uId)
-            .collection("sets")
-            .document("newId")
-            .setData(newItem.asDictionary())
+        let setRef = db.collection("users").document(uId)
+            .collection("sets").document(title).collection("flashcards")
+        for i in 0..<terms.count {
+            let newItem = FlashCardItem(id: newId, title: title, term: terms[i].term, definition: terms[i].definition)
+            //Save model
+            setRef.addDocument(data: newItem.asDictionary()) { error in
+                if let error = error {
+                    print("Error adding flashcard: \(error)")
+                } else {
+                    print("Flashcard added!")
+                }
+            }
+        }
 
     }
     
